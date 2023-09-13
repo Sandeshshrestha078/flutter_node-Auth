@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.08),
             Container(
-              margin: const EdgeInsets.all(8),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: CommonTextField(
                   controller: emailcontroller,
                   labelText: "Email",
@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 20.0,
             ),
             Container(
-              margin: const EdgeInsets.all(8),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: CommonTextField(
                 controller: passwordcontroller,
                 labelText: "password",
