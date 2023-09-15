@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const authRoute = require('./routes/auth')
+const SecretKey = require('./secret')
 
 const PORT = process.env.PORT || 3000
 const app = express()
@@ -11,11 +12,7 @@ app.use(authRoute)
 
 
 
-const DB = mongoose.connect("mongodb+srv://sandesh:yU6IdDWokDHNOddW@cluster0.3r6rfjy.mongodb.net/auth").then(()=>{
-    console.log('connection successful')
-}).catch((e)=>{
-    console.log(e)
-})
+const DBconn = SecretKey.DBconn
 
 
 
